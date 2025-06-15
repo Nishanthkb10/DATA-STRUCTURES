@@ -1,6 +1,7 @@
 /*Prefix operation in Stack
-/*Give this example Prefix expression as input: -+*823/^64+31
-The program solves this expression and gives the Output.*/
+Give this example Prefix expression as input: -+*823/^64+31
+The program solves this expression and gives the Output = -305
+*/
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -41,6 +42,6 @@ public class Stack_Prefix{
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter your expression: "); //-+*823/^64+31
 		String s=sc.nextLine();
-		System.out.println(postfix(s));
+		System.out.println(postfix(s)); // Gives Output = -305
 	}
 }
