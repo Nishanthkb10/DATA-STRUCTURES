@@ -1,5 +1,8 @@
 /*Stack implementation that gets input and checks with condition
-and Validate it with respective to opening and closing Brackets*/
+and Validate it with respective to opening and closing Brackets
+Input : ({}[][()])   Output : Yes
+Input : {()[]{()}}}  Output : No
+*/
 
 import java.util.Scanner;
 import java.util.Stack;
