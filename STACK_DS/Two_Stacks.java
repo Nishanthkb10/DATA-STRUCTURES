@@ -1,3 +1,5 @@
+/* This program creates Two stacks and perform Push, Pop and Display operations*/
+
 import java.util.Scanner;
 
 public class Two_Stacks{
