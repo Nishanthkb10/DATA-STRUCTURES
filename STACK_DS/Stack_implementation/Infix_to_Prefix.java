@@ -1,3 +1,8 @@
+/* Infix to Prefix Conversion
+Give the input Infix Expression : K+L-M*N+(O^P)+Q
+and the program converts to Prefix Expression : +K-L+*MN+^OPQ
+*/
+
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -52,8 +57,8 @@ public class Infix_to_Prefix {
     
     public static void main(String[] args) {
       Scanner sc=new Scanner(System.in);
-      System.out.println("Enter Infix Expression: ");
+      System.out.println("Enter Infix Expression: "); // Infix : K+L-M*N+(O^P)+Q
       String s=sc.nextLine();
-      System.out.println(infixtoPrefix(s));
+      System.out.println("Prefix : "+infixtoPrefix(s)); // Prefix : +K-L+*MN+^OPQ
   }
 }
