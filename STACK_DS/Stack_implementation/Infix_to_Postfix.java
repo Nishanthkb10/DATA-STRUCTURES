@@ -1,3 +1,7 @@
+/* Infix to Postfix Conversion
+Give the input Infix Expression : (A/(B-C+D))*(E-A)*C
+and the program converts to Postfix Expression : ABC-D+/EA-*C*
+*/
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -52,8 +56,8 @@ public class Infix_to_Postfix {
     
     public static void main(String[] args) {
       Scanner sc=new Scanner(System.in);
-      System.out.println("Enter Infix Expression: ");
+      System.out.println("Enter Infix Expression: "); // Infix : (A/(B-C+D))*(E-A)*C
       String s=sc.nextLine();
-      System.out.println(infixtoPostfix(s));
+      System.out.println("Postfix : "+infixtoPostfix(s)); // Postfix : ABC-D+/EA-*C*
   }
 }
