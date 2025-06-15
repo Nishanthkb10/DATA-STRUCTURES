@@ -1,3 +1,8 @@
+/*Infix operation in Stack
+Give this example Infix expression as input: 2+(5-3*6/2)+3
+The program solves this expression and gives the Output = 1
+*/
+
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -72,8 +77,8 @@ public class Stack_Infix {
     
     public static void main(String[] args) {
       Scanner sc=new Scanner(System.in);
-      System.out.println("Enter Infix Expression: ");
+      System.out.println("Enter Infix Expression: "); // 2+(5-3*6/2)+3
       String s=sc.nextLine();
-      System.out.println(infix(s));
+      System.out.println(infix(s)); // Gives Output = 1
   }
 }
