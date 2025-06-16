@@ -4,39 +4,53 @@ with whom have the ball with them at last.
 */
 
 /* Sample Input:
-5 7
-F 8
+10 23
+F 86
+F 63
+F 60
+R
+F 47
+R
+F 99
 F 9
-F 10
 R
 R
 */
 
-/* Sample Output : Player 8 */
+/* Sample Output : Player 9 */
 
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
-public class BallPassingGame {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int currentPlayerId = sc.nextInt();
-        Stack<Integer> playerStack = new Stack<>();
-        playerStack.push(currentPlayerId);
-        for (int i = 0; i < N; i++) {
-            String command = sc.next();
-            if (command.equals("F")) {
-                int newPlayerId = sc.nextInt();
-                playerStack.push(newPlayerId);
-            } else if (command.equals("R")) {
-                if (playerStack.size() > 1) {
-                    playerStack.pop();
+class BallPassingGame
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int val=sc.nextInt();
+        Stack<Integer>s=new Stack<>();
+        s.push(val);
+        for(int i=0;i<n;i++){
+            String command=sc.next();
+            if(command.equals("F")){
+                int ans=sc.nextInt();
+                s.push(ans);
+            }
+            else if(command.equals("R")){
+                if(s.size()>=2){
+                    int top=s.pop();
+                    int secondtop=s.pop();
+                    s.push(top);
+                    s.push(secondtop);
                 }
             }
         }
-        System.out.println("Player " + playerStack.peek());
-        sc.close();
+        if(s.isEmpty()){
+            System.out.println("Stack is Empty");
+            return;
+        }
+        else{
+            System.out.println("Player "+s.peek());
+        }
     }
 }
-
